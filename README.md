@@ -1,103 +1,6 @@
 <!-- markdownlint-disable MD033 MD041 -->
 
-<p align="center">
-  <a href="https://hub.docker.com/r/aaaguirrep/offensive-docker">
-    <img
-      alt="Offensive Docker"
-      src="https://github.com/aaaguirrep/offensive-docker/blob/master/img/banner.jpg"
-      width="600"
-    />
-  </a>
-</p>
-<br/>
-<p align="center">
-  <a href="https://github.com/aaaguirrep/offensive-docker"><img alt="GitHub code size in bytes" src="https://img.shields.io/github/languages/code-size/aaaguirrep/offensive-docker"></a>
-  <a href="https://github.com/aaaguirrep/offensive-docker"><img alt="GitHub repo size" src="https://img.shields.io/github/repo-size/aaaguirrep/offensive-docker"></a>
-  <a href="https://github.com/aaaguirrep/offensive-docker"><img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/aaaguirrep/offensive-docker"></a>
-    <a href="https://github.com/aaaguirrep/offensive-docker"><img alt="GitHub issues" src="https://img.shields.io/github/issues/aaaguirrep/offensive-docker"></a>
-    <a href="https://github.com/aaaguirrep/offensive-docker/graphs/contributors"><img alt="GitHub contributors" src="https://img.shields.io/github/contributors/aaaguirrep/offensive-docker">
-  <a href="https://github.com/aaaguirrep/offensive-docker/blob/master/LICENSE"><img alt="GitHub" src="https://img.shields.io/github/license/aaaguirrep/offensive-docker"></a>
-</p>
-<p align="center">
-  <a href="https://hub.docker.com/r/aaaguirrep/offensive-docker"><img alt="Docker Cloud Build Status" src="https://img.shields.io/docker/cloud/build/aaaguirrep/offensive-docker"></a>
-  <a href="https://hub.docker.com/r/aaaguirrep/offensive-docker"><img alt="Docker Automated build" src="https://img.shields.io/docker/automated/aaaguirrep/offensive-docker"></a>
-    <a href="https://hub.docker.com/r/aaaguirrep/offensive-docker"><img alt="Docker Pulls" src="https://img.shields.io/docker/pulls/aaaguirrep/offensive-docker"></a>
-  <a href="https://hub.docker.com/r/aaaguirrep/offensive-docker"><img alt="Docker Image Size (latest by date)" src="https://img.shields.io/docker/image-size/aaaguirrep/offensive-docker"></a>
-    <a href="https://hub.docker.com/r/aaaguirrep/offensive-docker"><img alt="Docker Image Version (latest by date)" src="https://img.shields.io/docker/v/aaaguirrep/offensive-docker"></a>
-    <a href="https://hub.docker.com/r/aaaguirrep/offensive-docker"><img alt="Docker Stars" src="https://img.shields.io/docker/stars/aaaguirrep/offensive-docker"></a>
-</p>
-<p align="center">
-  <a href="https://discord.gg/2uBfu8E"><img alt="Discord" src="https://img.shields.io/discord/749093790676942888"></a>
-</p>
-
 Offensive Docker is an image with the more used tools to create an pentest environment easily and quickly.
-
-:arrow_right: **Note:** Check out the next repo to know how to launch offensive docker in a VPS in Google Cloud Platform or Digital Ocean (free credit included). [Offensive Docker VPS](https://github.com/aaaguirrep/offensive-docker-vps)
-
-### Table of Contents
-
-- [Links](#links)
-- [Features](#features)
-- [Requirements](#requirements)
-- [Tools installed](#tools-installed)
-  - [Operative system tools](#operative-system-tools)
-  - [Network tools](#network-tools)
-  - [Developer tools](#developer-tools)
-  - [:hocho: Offensive tools](#hocho-offensive-tools)
-    - [Port scanning](#port-scanning)
-    - [:mag: Recon](#mag-recon)
-      - [Subdomains](#subdomains)
-      - [Subdomain takeover](#subdomain-takeover)
-      - [DNS Lookups](#dns-lookups)
-      - [:camera: Screenshot](#camera-screenshot)
-      - [:spider_web: Crawler](#spider_web-crawler)
-      - [:file_folder: Search directories](#file_folder-search-directories)
-      - [Fuzzer](#fuzzer)
-      - [Web Scanning](#web-scanning)
-      - [CMS](#cms)
-      - [Search JS](#search-js)
-    - [Wordlist](#wordlist)
-    - [Git repositories](#git-repositories)
-    - [OWASP](#owasp)
-    - [:iphone: Mobile](#iphone-mobile)
-    - [Brute force](#brute-force)
-    - [Cracking](#cracking)
-    - [OS Enumeration](#os-enumeration)
-    - [Exploits](#exploits)
-    - [Windows](#windows)
-    - [Reverse shell](#reverse-shell)
-    - [Other resources](#other-resources)
-  - [Forensic](#forensic)
-  - [Custom functions](#custom-functions)
-  - [Other services](#other-services)
-  - [Reporting tools](#reporting-tools)
-- [:memo: Documentation](#memo-documentation)
-- [:hammer_and_wrench: Usage](#hammer_and_wrench-usage)
-  - [Option 1 - Use the github repository](#option-1---use-the-github-repository)
-  - [Option 2 - Use the image from docker hub](#option-2---use-the-image-from-docker-hub)
-  - [Considerations to run the container](#considerations-to-run-the-container)
-- [:gear: Nice configurations](#gear-nice-configurations)
-  - [1. Configure credentials in the docker](#1-configure-credentials-in-the-docker)
-  - [2. Alias to connect to HTB (Hack the Box) VPN](#2-alias-to-connect-to-htb-hack-the-box-vpn)
-    - [Option 1 - HTB VPN using github repository](#option-1---htb-vpn-using-github-repository)
-    - [Option 2 - HTB VPN using docker hub image](#option-2---htb-vpn-using-docker-hub-image)
-  - [3. Save and load command history in your local environment](#3-save-and-load-command-history-in-your-local-environment)
-    - [Option 1 - Command history using github repository](#option-1---command-history-using-github-repository)
-    - [Option 2 - Command history using docker hub image](#option-2---command-history-using-docker-hub-image)
-- [:white_check_mark: Environment tested](#white_check_mark-environment-tested)
-- [:warning: Warning](#warning-warning)
-- [:coffee: Donations](#coffee-donations)
-- [Contributors](#contributors)
-- [Contributing](#contributing)
-- [:chart_with_upwards_trend: Stargazers over time](#chart_with_upwards_trend-stargazers-over-time)
-- [License](#license)
-
-## Links
-
-- 🎬 Video: [Demos](https://asciinema.org/~aaaguirrep)
-- 💬 Chat: [Discord](https://discord.gg/2uBfu8E)
-- 🌟 [VPS Automation](https://github.com/aaaguirrep/offensive-docker-vps)
-- 👉 [Advanced configurations](https://github.com/aaaguirrep/offensive-docker-custom)
 
 ## Features
 
@@ -357,17 +260,13 @@ Offensive Docker is an image with the more used tools to create an pentest envir
 
 - Latex
 
-## :memo: Documentation
-
-See the project's [wiki](https://github.com/aaaguirrep/offensive-docker/wiki) for documentation.
-
 ## :hammer_and_wrench: Usage
 
 You can use the docker image by the next two options:
 
 ### Option 1 - Use the github repository
 
-    git clone --depth 1 https://github.com/aaaguirrep/offensive-docker.git
+    git clone --depth 1 https://github.com/Transmetal/offensive-docker
     cd offensive-docker
     docker build -t offensive-docker .
     docker run --rm -it --name my-offensive-docker offensive-docker /bin/zsh
@@ -477,29 +376,3 @@ The image was tested in the following environments:
   The above command specify a path local directory mapped with /offensive container directory. You should save all information under /offensive directory.
 
 - Use hashcat and john the ripper on controlled environments as CTF. You can experiment issues.
-
-## :coffee: Donations
-
-Thanks for your donations, are always appreciated.
-
-While I drink the coffee I check more tools to add in the docker image.
-
-[![Buy me a coffee](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/aaaguirrep)
-
-## Contributors
-
-Thank you to all our [contributors](https://github.com/aaaguirrep/offensive-docker/graphs/contributors)!
-
-## Contributing
-
-[Contributing Guide](CONTRIBUTING.md)
-
-## :chart_with_upwards_trend: Stargazers over time
-
-[![Stargazers over time](https://starchart.cc/aaaguirrep/offensive-docker.svg)](https://starchart.cc/aaaguirrep/offensive-docker)
-
-## License
-
-[MIT](LICENSE)
-
-Copyright (c) 2020, Arsenio Aguirre
